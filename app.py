@@ -19,11 +19,11 @@ def index():
     if request.method == 'POST':
         stock = request.form.get('stock')
         if not stock:
-            stock = 'POWERGRID.NS'  # Default stock if none is entered
+            stock = 'LT.BO'  # Default stock if none is entered
         
         # Define the start and end dates for stock data
         start = dt.datetime(2000, 1, 1)
-        end = dt.datetime(2024, 10, 1)
+        end = dt.datetime(2025, 1, 1)
         
         # Download stock data
         df = yf.download(stock, start=start, end=end)
